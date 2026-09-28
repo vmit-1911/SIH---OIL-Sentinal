@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Surface & Canvas Hierarchy - Premium Industrial Intelligence Control Room */
+  --bg-canvas: #f8fafc;           /* Slate 50: clean, technical workstation base */
+  --bg-subtle: #f1f5f9;           /* Slate 100: side navigation, technical panels, inset strips */
+  --bg-surface: #ffffff;          /* Pure White: primary inspection surfaces */
+  --bg-surface-elevated: #ffffff; /* Elevated focal panels */
+  --bg-surface-hover: #f8fafc;    /* Row hover state */
+  --bg-surface-active: #f0f9ff;   /* Active selection tint (Sky 50) */
+  --bg-surface-dimmed: #f8fafc;   /* Dimmed state for non-focused nodes */
+
+  /* Structural Hairlines & Borders */
+  --border-subtle: #e2e8f0;       /* Slate 200: structural separators */
+  --border-default: #cbd5e1;      /* Slate 300: default panel boundaries */
+  --border-elevated: #94a3b8;     /* Slate 400: active boundaries */
+  --border-focus: #0284c7;        /* Sky 600: focus indicator */
+  --border-hairline: 1px solid #e2e8f0;
+
+  /* Typography Hierarchy */
+  --text-primary: #090d16;        /* Deep technical charcoal-navy */
+  --text-secondary: #1e293b;      /* Slate 800: clear operational prose */
+  --text-muted: #64748b;          /* Slate 500: telemetry, timestamps, metadata */
+  --text-dimmed: #94a3b8;         /* Slate 400 */
+  --text-accent: #0284c7;         /* Industrial Sky 600 */
+
+  /* Strict Semantic Signal Colors */
+  --primary-blue: #0284c7;
+  --primary-blue-hover: #0369a1;
+  --primary-blue-subtle: #f0f9ff;
+  --primary-blue-border: #bae6fd;
+
+  --sif-critical: #dc2626;        /* Signal Red 600 */
+  --sif-critical-hover: #b91c1c;
+  --sif-critical-bg: #fef2f2;     /* Red 50 */
+  --sif-critical-border: #fecaca; /* Red 200 */
+  --sif-critical-text: #991b1b;   /* Red 800 */
+
+  --barrier-amber: #d97706;       /* Signal Amber 600 */
+  --barrier-amber-bg: #fffbeb;    /* Amber 50 */
+  --barrier-amber-border: #fde68a;/* Amber 200 */
+  --barrier-amber-text: #92400e;  /* Amber 800 */
+
+  --verified-emerald: #16a34a;    /* Signal Green 600 */
+  --verified-emerald-bg: #f0fdf4; /* Green 50 */
+  --verified-emerald-border: #bbf7d0; /* Green 200 */
+  --verified-emerald-text: #166534; /* Green 800 */
+
+  --neutral-slate-bg: #f1f5f9;
+  --neutral-slate-border: #cbd5e1;
+  --neutral-slate-text: #475569;
+
+  /* Architectural Radii & Crisp Shadows */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+
+  --shadow-subtle: 0 1px 2px rgba(9, 13, 22, 0.04);
+  --shadow-card: 0 1px 3px rgba(9, 13, 22, 0.06), 0 1px 2px rgba(9, 13, 22, 0.03);
+  --shadow-elevated: 0 4px 14px rgba(9, 13, 22, 0.07), 0 1px 3px rgba(9, 13, 22, 0.04);
+  --shadow-modal: 0 20px 40px -10px rgba(9, 13, 22, 0.2), 0 8px 16px -6px rgba(9, 13, 22, 0.08);
+
+  /* Fonts */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', Consolas, Monaco, monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Technical Scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-canvas);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-default);
+  border-radius: var(--radius-xs);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-elevated);
+}
+
+/* Control Room Shell Architecture */
+.oil-app-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--bg-canvas);
+}
+
+.oil-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background-color: var(--bg-canvas);
+}
+
+/* Architectural Panels & Workspaces (Non-Card Centric) */
+.control-panel {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-subtle);
+  position: relative;
+}
+
+.control-panel-elevated {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-elevated);
+}
+
+.control-panel-inset {
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  padding: 1rem;
+}
+
+/* Backwards-compatible .oil-card */
+.oil-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 1.15rem;
+  box-shadow: var(--shadow-card);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.oil-card:hover {
+  border-color: var(--border-default);
+  box-shadow: var(--shadow-elevated);
+}
+
+.oil-card-elevated {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-elevated);
+}
+
+.oil-card-active {
+  border-color: var(--primary-blue) !important;
+  box-shadow: 0 0 0 1px var(--primary-blue), var(--shadow-card);
+}
+
+.oil-card-dimmed {
+  opacity: 0.35 !important;
+  filter: grayscale(40%);
+}
+
+/* Monospace Telemetry & Display Numerals */
+.oil-mono {
+  font-family: var(--font-mono);
+  font-feature-settings: 'tnum' on, 'zero' on;
+  letter-spacing: -0.02em;
+}
+
+.display-anchor {
+  font-family: var(--font-mono);
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--text-primary);
+}
+
+.display-anchor-sif {
+  font-family: var(--font-mono);
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--sif-critical-text);
+}
+
+/* Control Room Section Micro-Header */
+.section-tag {
+  font-family: var(--font-mono);
+  font-size: 0.675rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Precise Industrial Hairline Dividers */
+.hairline-divider {
+  height: 1px;
+  background-color: var(--border-subtle);
+  width: 100%;
+  margin: 1rem 0;
+}
+
+/* Signal Badges */
+.badge-sif {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background-color: var(--sif-critical-bg);
+  border: 1px solid var(--sif-critical-border);
+  color: var(--sif-critical-text);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-xs);
+  letter-spacing: 0.02em;
+}
+
+.badge-non-sif {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background-color: var(--neutral-slate-bg);
+  border: 1px solid var(--neutral-slate-border);
+  color: var(--neutral-slate-text);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-xs);
+}
+
+.badge-barrier {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background-color: var(--barrier-amber-bg);
+  border: 1px solid var(--barrier-amber-border);
+  color: var(--barrier-amber-text);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-xs);
+}
+
+.badge-verified {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background-color: var(--verified-emerald-bg);
+  border: 1px solid var(--verified-emerald-border);
+  color: var(--verified-emerald-text);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-xs);
+}
+
+.badge-blue {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background-color: var(--primary-blue-subtle);
+  border: 1px solid var(--primary-blue-border);
+  color: var(--primary-blue);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-xs);
+}
+
+/* Control Room Action Buttons */
+.oil-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.8rem;
+  font-family: var(--font-sans);
+  font-size: 0.775rem;
+  font-weight: 600;
+  border-radius: var(--radius-xs);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.12s ease;
+  user-select: none;
+  letter-spacing: 0.01em;
+}
+
+.oil-btn-primary {
+  background-color: var(--primary-blue);
+  color: #ffffff;
+  border-color: var(--primary-blue);
+  box-shadow: 0 1px 2px rgba(2, 132, 199, 0.2);
+}
+.oil-btn-primary:hover {
+  background-color: var(--primary-blue-hover);
+  border-color: var(--primary-blue-hover);
+}
+
+.oil-btn-secondary {
+  background-color: #ffffff;
+  color: var(--text-primary);
+  border-color: var(--border-default);
+  box-shadow: var(--shadow-subtle);
+}
+.oil-btn-secondary:hover {
+  background-color: var(--bg-subtle);
+  border-color: var(--border-elevated);
+}
+
+.oil-btn-danger {
+  background-color: var(--sif-critical-bg);
+  color: var(--sif-critical-text);
+  border-color: var(--sif-critical-border);
+}
+.oil-btn-danger:hover {
+  background-color: #fee2e2;
+}
+
+.oil-btn-success {
+  background-color: var(--verified-emerald-bg);
+  color: var(--verified-emerald-text);
+  border-color: var(--verified-emerald-border);
+}
+.oil-btn-success:hover {
+  background-color: #dcfce7;
+}
+
+/* Semantic NLP Highlighting Tokens */
+.token-energy {
+  background-color: #f0f9ff;
+  border-bottom: 2px solid #0284c7;
+  color: #0369a1;
+  padding: 0.05rem 0.3rem;
+  border-radius: 2px;
+  font-weight: 600;
+}
+
+.token-barrier {
+  background-color: #fffbeb;
+  border-bottom: 2px solid #d97706;
+  color: #92400e;
+  padding: 0.05rem 0.3rem;
+  border-radius: 2px;
+  font-weight: 600;
+}
+
+.token-action {
+  background-color: #f1f5f9;
+  border-bottom: 2px solid #475569;
+  color: #1e293b;
+  padding: 0.05rem 0.3rem;
+  border-radius: 2px;
+  font-weight: 600;
+}
+
+.token-hazard {
+  background-color: #fef2f2;
+  border-bottom: 2px solid #dc2626;
+  color: #991b1b;
+  padding: 0.05rem 0.3rem;
+  border-radius: 2px;
+  font-weight: 600;
+}
+
+.token-consequence {
+  background-color: #fee2e2;
+  border-bottom: 2px solid #b91c1c;
+  color: #7f1d1d;
+  padding: 0.05rem 0.3rem;
+  border-radius: 2px;
+  font-weight: 700;
+}
+
+/* Restrained Fade Transition */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}

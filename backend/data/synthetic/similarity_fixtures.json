@@ -1,0 +1,244 @@
+{
+  "synthetic_pairs": [
+    {
+      "pair_id": "PAIR_A_SAME_PRECURSOR_DIFFERENT_WORDING",
+      "description": "Crane lifting line failure with suspended casing swinging in line of fire, phrased in two different narrative styles",
+      "report_1": {
+        "text": "During crane lifting operation, the hoisting line snapped and the suspended casing swung directly toward the rigger in the line of fire.",
+        "location": "Rig-04 / Moran Field",
+        "precursor": {
+          "hazard": "Suspended Load / Rigging Failure",
+          "activity": "Crane & Hoisting Operations",
+          "barrier_failure": "Rigging Failure / Line Parted",
+          "exposure": "Line of Fire Exposure",
+          "potential_consequence": "FATALITY",
+          "life_saving_rule": "LSR_03_MECHANICAL_LIFTING",
+          "location": "Rig-04 / Moran Field"
+        }
+      },
+      "report_2": {
+        "text": "While hoisting casing tubulars on rig floor, the mechanical winch line parted and a heavy suspended load entered worker swing zone.",
+        "location": "Rig-04 / Moran Field",
+        "precursor": {
+          "hazard": "Suspended Load / Rigging Failure",
+          "activity": "Crane & Hoisting Operations",
+          "barrier_failure": "Rigging Failure / Line Parted",
+          "exposure": "Line of Fire Exposure",
+          "potential_consequence": "FATALITY",
+          "life_saving_rule": "LSR_03_MECHANICAL_LIFTING",
+          "location": "Rig-04 / Moran Field"
+        }
+      },
+      "expected_similarity_range": [0.85, 1.0]
+    },
+    {
+      "pair_id": "PAIR_B_RELATED_HAZARD_ACTIVITY",
+      "description": "High pressure manifold maintenance and gas leak during valve changeout",
+      "report_1": {
+        "text": "Technician unbolting high pressure manifold flange without verifying energy isolation lock.",
+        "location": "EPS Moran",
+        "precursor": {
+          "hazard": "High Pressure Fluid / Gas",
+          "activity": "Manifold & Valve Maintenance",
+          "barrier_failure": "Energy Isolation (LOTO) Failure",
+          "exposure": "Line of Fire Exposure",
+          "potential_consequence": "MAJOR_PROCESS_SAFETY_EVENT",
+          "life_saving_rule": "LSR_04_ENERGY_ISOLATION",
+          "location": "EPS Moran"
+        }
+      },
+      "report_2": {
+        "text": "Pressurized gas release occurred during pipe spool replacement when bleed valve was opened without tagout.",
+        "location": "GGS Nahorkatiya",
+        "precursor": {
+          "hazard": "Flammable Gas / Hydrocarbon Release",
+          "activity": "Pipeline & Piping Intervention",
+          "barrier_failure": "Energy Isolation (LOTO) Failure",
+          "exposure": "Line of Fire Exposure",
+          "potential_consequence": "MAJOR_PROCESS_SAFETY_EVENT",
+          "life_saving_rule": "LSR_04_ENERGY_ISOLATION",
+          "location": "GGS Nahorkatiya"
+        }
+      },
+      "expected_similarity_range": [0.55, 0.85]
+    },
+    {
+      "pair_id": "PAIR_C_SAME_LSR_DIFFERENT_HAZARD",
+      "description": "Mechanical lifting vs forklift loading under mechanical lifting rule",
+      "report_1": {
+        "text": "Crane hoist sling failed dropping drill collar on rig floor.",
+        "location": "Rig-07 / Digboi",
+        "precursor": {
+          "hazard": "Suspended Load / Rigging Failure",
+          "activity": "Crane & Hoisting Operations",
+          "barrier_failure": "Rigging Failure / Line Parted",
+          "exposure": "Line of Fire Exposure",
+          "potential_consequence": "FATALITY",
+          "life_saving_rule": "LSR_03_MECHANICAL_LIFTING",
+          "location": "Rig-07 / Digboi"
+        }
+      },
+      "report_2": {
+        "text": "Forklift tines slipped while transferring pump skids without tag line.",
+        "location": "Central Workshop",
+        "precursor": {
+          "hazard": "Heavy Machinery / Moving Equipment",
+          "activity": "Material Handling & Storage",
+          "barrier_failure": "Improper Rigging / Slinging",
+          "exposure": "Line of Fire Exposure",
+          "potential_consequence": "LOST_TIME_INJURY",
+          "life_saving_rule": "LSR_03_MECHANICAL_LIFTING",
+          "location": "Central Workshop"
+        }
+      },
+      "expected_similarity_range": [0.40, 0.70]
+    },
+    {
+      "pair_id": "PAIR_D_SAME_HAZARD_DIFFERENT_BARRIER",
+      "description": "Working at height with harness detached vs defective scaffolding",
+      "report_1": {
+        "text": "Derrickman working on monkey board at 25 meters height without safety harness tie-off.",
+        "location": "Rig-07 / Digboi",
+        "precursor": {
+          "hazard": "Working at Height Fall Exposure",
+          "activity": "Mast & Derrick Maintenance",
+          "barrier_failure": "Fall Protection Disconnected / Not Used",
+          "exposure": "Unprotected Fall Exposure",
+          "potential_consequence": "FATALITY",
+          "life_saving_rule": "LSR_09_WORKING_AT_HEIGHT",
+          "location": "Rig-07 / Digboi"
+        }
+      },
+      "report_2": {
+        "text": "Painter working on derrick platform with missing toe board and unstable scaffolding plank.",
+        "location": "Rig-07 / Digboi",
+        "precursor": {
+          "hazard": "Working at Height Fall Exposure",
+          "activity": "Mast & Derrick Maintenance",
+          "barrier_failure": "Defective / Incomplete Scaffolding",
+          "exposure": "Unprotected Fall Exposure",
+          "potential_consequence": "FATALITY",
+          "life_saving_rule": "LSR_09_WORKING_AT_HEIGHT",
+          "location": "Rig-07 / Digboi"
+        }
+      },
+      "expected_similarity_range": [0.65, 0.90]
+    },
+    {
+      "pair_id": "PAIR_E_UNRELATED_SAFETY_EVENTS",
+      "description": "Lifting failure vs routine workshop trip hazard",
+      "report_1": {
+        "text": "Crane hoist sling parted dropping heavy casing onto pipe rack.",
+        "location": "Rig-04 / Moran Field",
+        "precursor": {
+          "hazard": "Suspended Load / Rigging Failure",
+          "activity": "Crane & Hoisting Operations",
+          "barrier_failure": "Rigging Failure / Line Parted",
+          "exposure": "Line of Fire Exposure",
+          "potential_consequence": "FATALITY",
+          "life_saving_rule": "LSR_03_MECHANICAL_LIFTING",
+          "location": "Rig-04 / Moran Field"
+        }
+      },
+      "report_2": {
+        "text": "Paint cans and oily rags left unattended on workshop walkway causing minor tripping hazard.",
+        "location": "Central Workshop",
+        "precursor": {
+          "hazard": "Housekeeping & Minor Trip Hazard",
+          "activity": null,
+          "barrier_failure": null,
+          "exposure": null,
+          "potential_consequence": null,
+          "life_saving_rule": null,
+          "location": "Central Workshop"
+        }
+      },
+      "expected_similarity_range": [0.0, 0.30]
+    },
+    {
+      "pair_id": "PAIR_F_MISSING_DIMENSIONS",
+      "description": "High pressure event with sparse dimensions compared to fully specified report",
+      "report_1": {
+        "text": "High pressure gas line flange unbolted without verification.",
+        "location": "EPS Moran",
+        "precursor": {
+          "hazard": "High Pressure Fluid / Gas",
+          "activity": "Manifold & Valve Maintenance",
+          "barrier_failure": "Energy Isolation (LOTO) Failure",
+          "exposure": null,
+          "potential_consequence": "MAJOR_PROCESS_SAFETY_EVENT",
+          "life_saving_rule": "LSR_04_ENERGY_ISOLATION",
+          "location": "EPS Moran"
+        }
+      },
+      "report_2": {
+        "text": "Technician unbolting high pressure manifold flange without verifying energy isolation lock in line of fire.",
+        "location": "EPS Moran",
+        "precursor": {
+          "hazard": "High Pressure Fluid / Gas",
+          "activity": "Manifold & Valve Maintenance",
+          "barrier_failure": "Energy Isolation (LOTO) Failure",
+          "exposure": "Line of Fire Exposure",
+          "potential_consequence": "MAJOR_PROCESS_SAFETY_EVENT",
+          "life_saving_rule": "LSR_04_ENERGY_ISOLATION",
+          "location": "EPS Moran"
+        }
+      },
+      "expected_similarity_range": [0.80, 1.0]
+    },
+    {
+      "pair_id": "PAIR_G_DIFFERENT_LOCATIONS",
+      "description": "Identical work at height event at two different drilling rigs",
+      "report_1": {
+        "text": "Derrickman working on monkey board at 25m height without 100% tie-off.",
+        "location": "Rig-04 / Moran Field",
+        "precursor": {
+          "hazard": "Working at Height Fall Exposure",
+          "activity": "Mast & Derrick Maintenance",
+          "barrier_failure": "Fall Protection Disconnected / Not Used",
+          "exposure": "Unprotected Fall Exposure",
+          "potential_consequence": "FATALITY",
+          "life_saving_rule": "LSR_09_WORKING_AT_HEIGHT",
+          "location": "Rig-04 / Moran Field"
+        }
+      },
+      "report_2": {
+        "text": "Derrickman working on monkey board at 25m height without 100% tie-off.",
+        "location": "Rig-12 / Kumchai",
+        "precursor": {
+          "hazard": "Working at Height Fall Exposure",
+          "activity": "Mast & Derrick Maintenance",
+          "barrier_failure": "Fall Protection Disconnected / Not Used",
+          "exposure": "Unprotected Fall Exposure",
+          "potential_consequence": "FATALITY",
+          "life_saving_rule": "LSR_09_WORKING_AT_HEIGHT",
+          "location": "Rig-12 / Kumchai"
+        }
+      },
+      "expected_similarity_range": [0.85, 0.98]
+    },
+    {
+      "pair_id": "PAIR_H_NO_PRECURSOR",
+      "description": "Report with no precursor compared against any report",
+      "report_1": {
+        "text": "Regular morning administrative shift briefing conducted with no safety observations.",
+        "location": "HQ Duliajan",
+        "precursor": null
+      },
+      "report_2": {
+        "text": "Crane hoist sling failed dropping drill collar on rig floor.",
+        "location": "Rig-07 / Digboi",
+        "precursor": {
+          "hazard": "Suspended Load / Rigging Failure",
+          "activity": "Crane & Hoisting Operations",
+          "barrier_failure": "Rigging Failure / Line Parted",
+          "exposure": "Line of Fire Exposure",
+          "potential_consequence": "FATALITY",
+          "life_saving_rule": "LSR_03_MECHANICAL_LIFTING",
+          "location": "Rig-07 / Digboi"
+        }
+      },
+      "expected_similarity_range": [0.0, 0.0]
+    }
+  ]
+}

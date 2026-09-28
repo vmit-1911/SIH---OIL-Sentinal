@@ -1,0 +1,95 @@
+{
+  "profile_id": "SIF_SCREENING_PROFILE_V1",
+  "version": "1.0.0",
+  "name": "Oil & Gas E&P Multi-Factor SIF Screening Profile",
+  "description": "Configurable heuristic screening profile for detecting Serious Injury & Fatality precursors in E&P operations.",
+  "active": true,
+  "threshold_semantics": "CONFIGURABLE HEURISTIC SCREENING THRESHOLDS. These values (potential_sif_min_score=0.45, non_sif_max_score=0.20) are configurable operational screening heuristics, not validated statistical probabilities, certified SIF determinations, official OIL SIF thresholds, or universal industry standards. Future calibration requires labelled OIL evaluation data.",
+  "factor_weights": {
+    "energy_hazard": 0.35,
+    "exposure_proximity": 0.30,
+    "barrier_degradation": 0.25,
+    "potential_consequence": 0.10
+  },
+  "factor_descriptions": {
+    "energy_hazard": "High or stored energy hazard presence (weight: 0.35)",
+    "exposure_proximity": "Personnel exposure, line of fire, or proximity (weight: 0.30)",
+    "barrier_degradation": "Degraded, bypassed, or absent safety barrier (weight: 0.25)",
+    "potential_consequence": "Explicit worst-case consequence potential (weight: 0.10)",
+    "context": "Qualitative operational context (activity, equipment). Does not directly contribute to numeric score in SIF_SCREENING_PROFILE_V1 (weight: 0.00)"
+  },
+  "strength_thresholds": {
+    "high": 0.70,
+    "medium": 0.40,
+    "low": 0.00
+  },
+  "classification_thresholds": {
+    "potential_sif_min_score": 0.45,
+    "non_sif_max_score": 0.20
+  },
+  "screening_rules": [
+    {
+      "rule_id": "SIF_RULE_GRAVITY_LIFTING_001",
+      "name": "Suspended Dynamic Load with Worker Exposure & Rigging Failure",
+      "description": "High-energy suspended load coupled with personnel in line of fire/swing path and rigging/line failure.",
+      "required_factors": ["energy_hazard", "exposure_proximity", "barrier_degradation"],
+      "energy_types": ["GRAVITY"],
+      "default_potential_severity": "FATALITY",
+      "severity_details": "Catastrophic crush fatality or severe blunt impact under swinging/falling heavy load."
+    },
+    {
+      "rule_id": "SIF_RULE_PRESSURE_ISOLATION_002",
+      "name": "High Pressure Hydrocarbon Release with Isolation Failure",
+      "description": "High pressure fluid/gas hazard with compromised double-block-and-bleed or live line unbolting.",
+      "required_factors": ["energy_hazard", "barrier_degradation"],
+      "energy_types": ["PRESSURE", "CHEMICAL_FLAMMABLE"],
+      "default_potential_severity": "MAJOR_PROCESS_SAFETY_EVENT",
+      "severity_details": "Uncontrolled pressurized hydrocarbon gas release, high-velocity projectile impact, or vapor cloud ignition."
+    },
+    {
+      "rule_id": "SIF_RULE_HEIGHT_FALL_PROTECTION_003",
+      "name": "Working at Height with Disconnected Fall Protection",
+      "description": "Elevated fall hazard (derrick/mast/scaffold) with unhooked harness, missing tie-off, or compromised guardrail.",
+      "required_factors": ["energy_hazard", "exposure_proximity", "barrier_degradation"],
+      "energy_types": ["GRAVITY"],
+      "default_potential_severity": "FATALITY",
+      "severity_details": "Fatal fall from height due to absent or bypassed 100% tie-off fall arrest system."
+    },
+    {
+      "rule_id": "SIF_RULE_CONFINED_SPACE_ATMOSPHERE_004",
+      "name": "Confined Space Entry with Omitted Gas Testing or Standby Attendant",
+      "description": "Tank, vessel, or pit entry with hazardous/toxic atmosphere and missing atmospheric test or standby protection.",
+      "required_factors": ["energy_hazard", "exposure_proximity", "barrier_degradation"],
+      "energy_types": ["ASPHYXIATION", "CHEMICAL_TOXIC", "CHEMICAL_FLAMMABLE"],
+      "default_potential_severity": "FATALITY",
+      "severity_details": "Toxic gas poisoning (H2S), oxygen deficiency asphyxiation, or tank fire/explosion."
+    },
+    {
+      "rule_id": "SIF_RULE_ELECTRICAL_ISOLATION_005",
+      "name": "Live High Voltage Electrical Exposure without Isolation",
+      "description": "Live electrical circuits or switchgear without Lockout/Tagout (LOTO) and physical isolation.",
+      "required_factors": ["energy_hazard", "barrier_degradation"],
+      "energy_types": ["ELECTRICAL"],
+      "default_potential_severity": "FATALITY",
+      "severity_details": "Electrocution or severe arc flash burns from unisolated high-voltage electrical equipment."
+    },
+    {
+      "rule_id": "SIF_RULE_HOT_WORK_FLAMMABLE_006",
+      "name": "Hot Work in Flammable Zone without Gas Monitoring / Fire Watch",
+      "description": "Welding, cutting, or grinding in gas-bearing operational zones without continuous gas clearance.",
+      "required_factors": ["energy_hazard", "barrier_degradation"],
+      "energy_types": ["CHEMICAL_FLAMMABLE"],
+      "default_potential_severity": "MAJOR_PROCESS_SAFETY_EVENT",
+      "severity_details": "Ignition of flammable hydrocarbon vapors leading to localized explosion or flash fire."
+    },
+    {
+      "rule_id": "SIF_RULE_HOUSEKEEPING_NON_SIF_007",
+      "name": "Low-Energy Housekeeping / Obstruction Event",
+      "description": "Minor housekeeping, clutter, or trip hazard with low stored energy and no critical barrier degradation.",
+      "required_factors": [],
+      "energy_types": ["LOW_ENERGY"],
+      "default_potential_severity": "LOW_IMPACT",
+      "severity_details": "Minor trip, slip, or scratch with low kinetic energy and no catastrophic consequence potential."
+    }
+  ]
+}

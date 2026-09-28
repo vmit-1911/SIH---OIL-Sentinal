@@ -1,0 +1,518 @@
+{
+  "lexicon_id": "OIL_SAFETY_LEXICON_V1",
+  "version": "1.0.0",
+  "description": "Configurable domain lexicon for Oil & Gas E&P safety entity and hazard extraction.",
+  "hazards": [
+    {
+      "canonical_name": "Suspended Heavy Load",
+      "category": "HAZARD",
+      "energy_type": "GRAVITY",
+      "patterns": [
+        "suspended load",
+        "heavy elevator swung",
+        "heavy elevator",
+        "suspended elevator",
+        "casing elevator",
+        "struck by elevator",
+        "dropped object",
+        "dropped tubular",
+        "suspended casing",
+        "hanging load",
+        "overhead load",
+        "swinging elevator",
+        "lifted tubular",
+        "suspended drill collar"
+      ]
+    },
+    {
+      "canonical_name": "Working at Height Fall Exposure",
+      "category": "HAZARD",
+      "energy_type": "GRAVITY",
+      "patterns": [
+        "working at height",
+        "monkey board",
+        "derrick mast",
+        "crown block",
+        "rig floor elevation",
+        "scaffold platform",
+        "high elevation",
+        "rig mast maintenance"
+      ]
+    },
+    {
+      "canonical_name": "High Pressure Fluid / Gas",
+      "category": "HAZARD",
+      "energy_type": "PRESSURE",
+      "patterns": [
+        "high pressure",
+        "pressurized gas",
+        "pressurized line",
+        "trapped pressure",
+        "pressure buildup",
+        "pressure surge",
+        "pressurized hydrocarbon",
+        "high pressure manifold",
+        "wellhead pressure"
+      ]
+    },
+    {
+      "canonical_name": "Flammable Hydrocarbon Release",
+      "category": "HAZARD",
+      "energy_type": "CHEMICAL_FLAMMABLE",
+      "patterns": [
+        "gas leak",
+        "gas leakage",
+        "hydrocarbon gas",
+        "crude oil leak",
+        "gas release",
+        "gas cloud",
+        "gas vented",
+        "flammable vapor",
+        "crude spill",
+        "natural gas leak"
+      ]
+    },
+    {
+      "canonical_name": "Toxic Gas (H2S / Sour Gas)",
+      "category": "HAZARD",
+      "energy_type": "CHEMICAL_TOXIC",
+      "patterns": [
+        "h2s",
+        "hydrogen sulfide",
+        "sour gas",
+        "toxic gas",
+        "hazardous atmosphere",
+        "sludge gas"
+      ]
+    },
+    {
+      "canonical_name": "Rotating & Mechanical Equipment",
+      "category": "HAZARD",
+      "energy_type": "MECHANICAL_KINETIC",
+      "patterns": [
+        "rotary table",
+        "top drive",
+        "cathead",
+        "mud pump belts",
+        "winch drum",
+        "rotating shaft",
+        "pulley"
+      ]
+    },
+    {
+      "canonical_name": "Electrical Energy / Arc Flash",
+      "category": "HAZARD",
+      "energy_type": "ELECTRICAL",
+      "patterns": [
+        "electrical energy",
+        "live circuit",
+        "high voltage",
+        "switchgear",
+        "transformer yard",
+        "short circuit",
+        "arc flash"
+      ]
+    },
+    {
+      "canonical_name": "Confined Space Atmosphere",
+      "category": "HAZARD",
+      "energy_type": "ASPHYXIATION",
+      "patterns": [
+        "confined space",
+        "tank compartment",
+        "separator vessel",
+        "mud pit",
+        "sump pit",
+        "sludge pit",
+        "manhole"
+      ]
+    },
+    {
+      "canonical_name": "Housekeeping & Minor Trip Hazard",
+      "category": "HAZARD",
+      "energy_type": "LOW_ENERGY",
+      "patterns": [
+        "trip hazard",
+        "paint cans",
+        "cleaning rags",
+        "slippery walkway",
+        "oil stain on floor",
+        "messy tools"
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "canonical_name": "Casing Running Operation",
+      "category": "ACTIVITY",
+      "patterns": [
+        "running casing",
+        "casing running",
+        "running 9-5/8 inch casing",
+        "casing handling",
+        "lowering casing",
+        "making up casing"
+      ]
+    },
+    {
+      "canonical_name": "Mast & Derrick Maintenance",
+      "category": "ACTIVITY",
+      "patterns": [
+        "mast maintenance",
+        "derrick maintenance",
+        "monkey board operations",
+        "greasing crown block",
+        "derrick inspection"
+      ]
+    },
+    {
+      "canonical_name": "Manifold & Valve Maintenance",
+      "category": "ACTIVITY",
+      "patterns": [
+        "unbolting flange",
+        "manifold maintenance",
+        "valve greasing",
+        "flange bolting",
+        "line blinding",
+        "spading line"
+      ]
+    },
+    {
+      "canonical_name": "Tank & Vessel Cleaning",
+      "category": "ACTIVITY",
+      "patterns": [
+        "tank cleaning",
+        "sludge cleaning",
+        "separator entry",
+        "vessel cleaning",
+        "mud pit cleaning"
+      ]
+    },
+    {
+      "canonical_name": "Hot Work & Welding",
+      "category": "ACTIVITY",
+      "patterns": [
+        "welding",
+        "gas cutting",
+        "grinding",
+        "hot work",
+        "torch cutting"
+      ]
+    },
+    {
+      "canonical_name": "Vehicle & Bowser Operation",
+      "category": "ACTIVITY",
+      "patterns": [
+        "driving bowser",
+        "crew truck transportation",
+        "vehicle driving",
+        "material shifting by truck"
+      ]
+    },
+    {
+      "canonical_name": "Routine Housekeeping",
+      "category": "ACTIVITY",
+      "patterns": [
+        "housekeeping",
+        "workshop cleaning",
+        "walkway clearing",
+        "storing tools"
+      ]
+    }
+  ],
+  "equipment": [
+    {
+      "canonical_name": "Air Winch & Elevator",
+      "category": "EQUIPMENT",
+      "patterns": ["air winch", "winch line", "casing elevator", "tugger winch", "winch rope"]
+    },
+    {
+      "canonical_name": "Monkey Board & Derrick Mast",
+      "category": "EQUIPMENT",
+      "patterns": ["monkey board", "derrick mast", "crown block", "mast ladder", "inertia reel"]
+    },
+    {
+      "canonical_name": "Production Manifold & Flange",
+      "category": "EQUIPMENT",
+      "patterns": ["production manifold", "flange", "double-block-and-bleed", "bleed-off valve", "studs", "gasket"]
+    },
+    {
+      "canonical_name": "Storage Tank & Compartment",
+      "category": "EQUIPMENT",
+      "patterns": ["storage tank", "crude tank", "tank compartment", "manhole", "tank farm"]
+    },
+    {
+      "canonical_name": "Mobile Crane & Hoist",
+      "category": "EQUIPMENT",
+      "patterns": ["mobile crane", "crane sling", "wire rope sling", "shackle", "chain hoist"]
+    },
+    {
+      "canonical_name": "Mud Pump & High Pressure Lines",
+      "category": "EQUIPMENT",
+      "patterns": ["mud pump", "discharge line", "rotary hose", "choke manifold", "bop"]
+    }
+  ],
+  "barrier_failures": [
+    {
+      "canonical_name": "Lifting Line / Rigging Failure",
+      "category": "BARRIER_FAILURE",
+      "patterns": [
+        "winch line parted",
+        "line parted",
+        "rope snapped",
+        "sling broke",
+        "rigging failed",
+        "shackle parted",
+        "wire rope snapped"
+      ]
+    },
+    {
+      "canonical_name": "Fall Protection Disconnected / Not Used",
+      "category": "BARRIER_FAILURE",
+      "patterns": [
+        "unhooked lanyard",
+        "harness unhooked",
+        "without 100% tie-off",
+        "safety harness not worn",
+        "lanyard detached",
+        "fall protection bypassed"
+      ]
+    },
+    {
+      "canonical_name": "Energy Isolation (LOTO) Failure",
+      "category": "BARRIER_FAILURE",
+      "patterns": [
+        "valve was not fully closed",
+        "not fully closed",
+        "isolation not verified",
+        "loto not applied",
+        "pressure not bled off",
+        "blind missing",
+        "unisolated line"
+      ]
+    },
+    {
+      "canonical_name": "Confined Space Control / Gas Test Omission",
+      "category": "BARRIER_FAILURE",
+      "patterns": [
+        "without gas test",
+        "gas test clearance certificate missing",
+        "without gas test clearance",
+        "without a dedicated standby man",
+        "no standby man stationed",
+        "standby attendant missing"
+      ]
+    },
+    {
+      "canonical_name": "Machine Guarding Missing or Removed",
+      "category": "BARRIER_FAILURE",
+      "patterns": [
+        "guard removed",
+        "guard missing",
+        "interlock bypassed",
+        "safety cover open"
+      ]
+    }
+  ],
+  "exposure": [
+    {
+      "canonical_name": "Personnel in Line of Fire / Swing Path",
+      "category": "EXPOSURE",
+      "patterns": [
+        "floormen jumped out of the way",
+        "narrowly missing two floormen",
+        "in the line of fire",
+        "within swing radius",
+        "standing under load",
+        "working directly underneath",
+        "technician in direct trajectory",
+        "near pinch point"
+      ]
+    },
+    {
+      "canonical_name": "Unprotected Fall Exposure",
+      "category": "EXPOSURE",
+      "patterns": [
+        "at 25 meters height",
+        "working at height without tie-off",
+        "elevated platform without guardrail"
+      ]
+    },
+    {
+      "canonical_name": "Atmospheric Toxic / Suffocation Exposure",
+      "category": "EXPOSURE",
+      "patterns": [
+        "entered the crude oil storage tank",
+        "entered tank compartment",
+        "inside separator without breathing apparatus"
+      ]
+    }
+  ],
+  "unsafe_acts": [
+    {
+      "canonical_name": "Unhooking Safety Harness at Height",
+      "category": "UNSAFE_ACT",
+      "patterns": [
+        "unhooked his full body harness",
+        "unhooked lanyard",
+        "detached safety harness",
+        "climbed without fall protection"
+      ]
+    },
+    {
+      "canonical_name": "Entering Confined Space Without Clearance",
+      "category": "UNSAFE_ACT",
+      "patterns": [
+        "entered the crude oil storage tank without gas test",
+        "entered vessel without permit",
+        "unauthorized tank entry"
+      ]
+    },
+    {
+      "canonical_name": "Unbolting Flange on Unisolated Pressurized Line",
+      "category": "UNSAFE_ACT",
+      "patterns": [
+        "unbolting high pressure flange without verifying isolation",
+        "loosened studs on live line"
+      ]
+    },
+    {
+      "canonical_name": "Standing in Line of Fire / Swing Path",
+      "category": "UNSAFE_ACT",
+      "patterns": [
+        "standing in swing radius",
+        "working underneath suspended load"
+      ]
+    }
+  ],
+  "unsafe_conditions": [
+    {
+      "canonical_name": "Defective / Worn Rigging Equipment",
+      "category": "UNSAFE_CONDITION",
+      "patterns": [
+        "defective air winch",
+        "corroded wire rope",
+        "worn sling",
+        "damaged shackle"
+      ]
+    },
+    {
+      "canonical_name": "Trapped Pressurized Hydrocarbon Gas",
+      "category": "UNSAFE_CONDITION",
+      "patterns": [
+        "trapped pressurized hydrocarbon gas",
+        "leaking manifold valve",
+        "corroded high pressure line"
+      ]
+    },
+    {
+      "canonical_name": "Housekeeping & Walkway Obstruction",
+      "category": "UNSAFE_CONDITION",
+      "patterns": [
+        "empty paint cans and cleaning rags",
+        "cluttered walkway",
+        "oil on rig floor",
+        "unsecured items on elevated deck"
+      ]
+    }
+  ],
+  "potential_consequences": [
+    {
+      "canonical_name": "Crush Fatality / Severe Impact",
+      "category": "POTENTIAL_CONSEQUENCE",
+      "patterns": [
+        "crush fatality",
+        "fatal impact",
+        "struck by heavy elevator",
+        "severely crushed"
+      ]
+    },
+    {
+      "canonical_name": "Fall from Height Fatality",
+      "category": "POTENTIAL_CONSEQUENCE",
+      "patterns": [
+        "fall from 25 meters",
+        "fatal fall",
+        "fall from derrick"
+      ]
+    },
+    {
+      "canonical_name": "High Velocity Projectile / Flange Blowout",
+      "category": "POTENTIAL_CONSEQUENCE",
+      "patterns": [
+        "flange projectile",
+        "gas blow-out",
+        "high velocity projectile"
+      ]
+    },
+    {
+      "canonical_name": "Toxic Asphyxiation / Tank Fatality",
+      "category": "POTENTIAL_CONSEQUENCE",
+      "patterns": [
+        "asphyxiation",
+        "toxic gas poisoning",
+        "tank fatality"
+      ]
+    }
+  ],
+  "people_roles": [
+    {
+      "canonical_name": "Derrickman",
+      "category": "PEOPLE_ROLE",
+      "patterns": ["derrickman", "derrick man"]
+    },
+    {
+      "canonical_name": "Floorman / Roughneck",
+      "category": "PEOPLE_ROLE",
+      "patterns": ["floormen", "floorman", "roughneck", "floor hands"]
+    },
+    {
+      "canonical_name": "Technician / Maintenance Personnel",
+      "category": "PEOPLE_ROLE",
+      "patterns": ["technician", "mechanic", "electrician", "instrument technician"]
+    },
+    {
+      "canonical_name": "Contractor Personnel",
+      "category": "PEOPLE_ROLE",
+      "patterns": ["contractor personnel", "contractor worker", "casual worker"]
+    },
+    {
+      "canonical_name": "Driller / Toolpusher",
+      "category": "PEOPLE_ROLE",
+      "patterns": ["driller", "assistant driller", "toolpusher", "rig superintendent"]
+    }
+  ],
+  "negation_config": {
+    "hazard_negation_triggers": [
+      "no",
+      "not",
+      "never",
+      "zero",
+      "nil",
+      "none",
+      "neither",
+      "nor",
+      "did not occur",
+      "no trace of",
+      "free of",
+      "absence of",
+      "was not observed"
+    ],
+    "barrier_absence_triggers": [
+      "without",
+      "missing",
+      "lacking",
+      "failed to",
+      "not worn",
+      "unhooked",
+      "not closed",
+      "not isolated",
+      "not applied",
+      "not obtained",
+      "not verified",
+      "did not wear",
+      "did not conduct",
+      "omitted"
+    ]
+  }
+}

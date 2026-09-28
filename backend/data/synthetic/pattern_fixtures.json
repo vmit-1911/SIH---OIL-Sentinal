@@ -1,0 +1,254 @@
+{
+  "test_cases": {
+    "case_a_qualifying_pattern": {
+      "description": "3 strongly related suspended load reports meeting the minimum recurrence count of 3",
+      "expected_pattern": true,
+      "expected_member_count": 3,
+      "reports": [
+        {
+          "ref": "SYN-A1",
+          "raw_text": "During crane lifting on rig floor, the mechanical winch line parted and casing tubulars swung into worker line of fire.",
+          "location": "Rig-04 / Moran Field",
+          "timestamp": "2026-01-10T08:00:00Z",
+          "precursor": {
+            "hazard": "Suspended Load",
+            "activity": "Crane Lifting & Hoisting",
+            "barrier_failure": "Rigging Failure / Line Parted",
+            "exposure": "Line of Fire Exposure",
+            "potential_consequence": "FATALITY",
+            "life_saving_rule": "LSR_03_MECHANICAL_LIFTING",
+            "location": "Rig-04 / Moran Field"
+          }
+        },
+        {
+          "ref": "SYN-A2",
+          "raw_text": "While hoisting casing tubulars with crane, the wire rope parted dropping suspended load into active work deck.",
+          "location": "Rig-04 / Moran Field",
+          "timestamp": "2026-01-15T14:30:00Z",
+          "precursor": {
+            "hazard": "Suspended Load",
+            "activity": "Crane Lifting & Hoisting",
+            "barrier_failure": "Rigging Failure / Line Parted",
+            "exposure": "Line of Fire Exposure",
+            "potential_consequence": "FATALITY",
+            "life_saving_rule": "LSR_03_MECHANICAL_LIFTING",
+            "location": "Rig-04 / Moran Field"
+          }
+        },
+        {
+          "ref": "SYN-A3",
+          "raw_text": "Auxiliary hoist line snapped during casing lift causing suspended tubular assembly to swing across the rig floor.",
+          "location": "Rig-04 / Moran Field",
+          "timestamp": "2026-01-20T11:15:00Z",
+          "precursor": {
+            "hazard": "Suspended Load",
+            "activity": "Crane Lifting & Hoisting",
+            "barrier_failure": "Rigging Failure / Line Parted",
+            "exposure": "Line of Fire Exposure",
+            "potential_consequence": "FATALITY",
+            "life_saving_rule": "LSR_03_MECHANICAL_LIFTING",
+            "location": "Rig-04 / Moran Field"
+          }
+        }
+      ]
+    },
+    "case_b_insufficient_member_count": {
+      "description": "2 strongly related reports which fail to meet the MIN_PATTERN_REPORT_COUNT=3 recurrence threshold",
+      "expected_pattern": false,
+      "expected_member_count": 2,
+      "reports": [
+        {
+          "ref": "SYN-B1",
+          "raw_text": "Scaffolding planks collapsed during elevated flare stack inspection dropping worker 6 meters.",
+          "location": "EPS Moran",
+          "timestamp": "2026-02-01T09:00:00Z",
+          "precursor": {
+            "hazard": "Working at Height",
+            "activity": "Scaffolding & Structural Access",
+            "barrier_failure": "Fall Protection / Guardrail Failure",
+            "exposure": "Fall From Height Exposure",
+            "potential_consequence": "FATALITY",
+            "life_saving_rule": "LSR_02_WORKING_AT_HEIGHT",
+            "location": "EPS Moran"
+          }
+        },
+        {
+          "ref": "SYN-B2",
+          "raw_text": "Worker fell from scaffold staging at 5 meters when unsecured platform plank shifted during maintenance.",
+          "location": "EPS Moran",
+          "timestamp": "2026-02-05T10:30:00Z",
+          "precursor": {
+            "hazard": "Working at Height",
+            "activity": "Scaffolding & Structural Access",
+            "barrier_failure": "Fall Protection / Guardrail Failure",
+            "exposure": "Fall From Height Exposure",
+            "potential_consequence": "FATALITY",
+            "life_saving_rule": "LSR_02_WORKING_AT_HEIGHT",
+            "location": "EPS Moran"
+          }
+        }
+      ]
+    },
+    "case_c_divergent_barriers": {
+      "description": "3 reports sharing high-energy hazard but substantially different activities and barrier failures",
+      "expected_pattern": false,
+      "reports": [
+        {
+          "ref": "SYN-C1",
+          "raw_text": "High pressure mud line burst due to corroded pipe elbow during drilling mud circulation.",
+          "location": "Rig-07",
+          "precursor": {
+            "hazard": "High Pressure Fluid",
+            "activity": "Drilling Mud Circulation",
+            "barrier_failure": "Piping Integrity Failure",
+            "exposure": "High Pressure Injection Exposure",
+            "potential_consequence": "PERMANENT_DISABLING_INJURY",
+            "life_saving_rule": "LSR_04_ENERGY_ISOLATION",
+            "location": "Rig-07"
+          }
+        },
+        {
+          "ref": "SYN-C2",
+          "raw_text": "Hydraulic accumulator pressure relief valve seized closed during BOP control test.",
+          "location": "Rig-07",
+          "precursor": {
+            "hazard": "High Pressure Fluid",
+            "activity": "BOP Control & Function Testing",
+            "barrier_failure": "Pressure Relief Valve Failure",
+            "exposure": "Overpressure Explosion Exposure",
+            "potential_consequence": "MAJOR_PROCESS_SAFETY_EVENT",
+            "life_saving_rule": "LSR_04_ENERGY_ISOLATION",
+            "location": "Rig-07"
+          }
+        },
+        {
+          "ref": "SYN-C3",
+          "raw_text": "Worker uncoupled pressurized washdown hose without closing manual ball valve.",
+          "location": "Rig-07",
+          "precursor": {
+            "hazard": "High Pressure Fluid",
+            "activity": "Deck Housekeeping & Washdown",
+            "barrier_failure": "Administrative Depressurization Procedure",
+            "exposure": "Line of Fire Exposure",
+            "potential_consequence": "FIRST_AID",
+            "life_saving_rule": "LSR_04_ENERGY_ISOLATION",
+            "location": "Rig-07"
+          }
+        }
+      ]
+    },
+    "case_d_multi_location": {
+      "description": "4 reports across 4 distinct operational locations with identical precursor profiles",
+      "expected_pattern": true,
+      "expected_member_count": 4,
+      "expected_representative_location": null,
+      "expected_locations_count": 4,
+      "reports": [
+        {
+          "ref": "SYN-D1",
+          "raw_text": "Hot work sparks ignited gas vapor during open drain sump welding.",
+          "location": "GGS-01 Nahorkatiya",
+          "precursor": {
+            "hazard": "Flammable Hydrocarbon Vapor",
+            "activity": "Welding & Hot Work",
+            "barrier_failure": "Gas Monitoring / Hot Work Permit Failure",
+            "exposure": "Flash Fire Exposure",
+            "potential_consequence": "FATALITY",
+            "life_saving_rule": "LSR_06_HOT_WORK",
+            "location": "GGS-01 Nahorkatiya"
+          }
+        },
+        {
+          "ref": "SYN-D2",
+          "raw_text": "Welding torch sparks ignited residual condensate vapor in open manifold trench.",
+          "location": "EPS Moran",
+          "precursor": {
+            "hazard": "Flammable Hydrocarbon Vapor",
+            "activity": "Welding & Hot Work",
+            "barrier_failure": "Gas Monitoring / Hot Work Permit Failure",
+            "exposure": "Flash Fire Exposure",
+            "potential_consequence": "FATALITY",
+            "life_saving_rule": "LSR_06_HOT_WORK",
+            "location": "EPS Moran"
+          }
+        },
+        {
+          "ref": "SYN-D3",
+          "raw_text": "Grinding sparks triggered flash in oil-contaminated drainage pit during piping repair.",
+          "location": "OCS Dikom",
+          "precursor": {
+            "hazard": "Flammable Hydrocarbon Vapor",
+            "activity": "Welding & Hot Work",
+            "barrier_failure": "Gas Monitoring / Hot Work Permit Failure",
+            "exposure": "Flash Fire Exposure",
+            "potential_consequence": "FATALITY",
+            "life_saving_rule": "LSR_06_HOT_WORK",
+            "location": "OCS Dikom"
+          }
+        },
+        {
+          "ref": "SYN-D4",
+          "raw_text": "Gas flare up near welding habitat caused by unmonitored vapor accumulation.",
+          "location": "Rig-09 Jorajan",
+          "precursor": {
+            "hazard": "Flammable Hydrocarbon Vapor",
+            "activity": "Welding & Hot Work",
+            "barrier_failure": "Gas Monitoring / Hot Work Permit Failure",
+            "exposure": "Flash Fire Exposure",
+            "potential_consequence": "FATALITY",
+            "life_saving_rule": "LSR_06_HOT_WORK",
+            "location": "Rig-09 Jorajan"
+          }
+        }
+      ]
+    },
+    "case_e_completely_unrelated": {
+      "description": "3 completely unrelated safety events spanning different domains",
+      "expected_pattern": false,
+      "reports": [
+        {
+          "ref": "SYN-E1",
+          "raw_text": "Driver speeding on access road lost control on muddy turn.",
+          "location": "Moran Access Road",
+          "precursor": {
+            "hazard": "Moving Vehicle",
+            "activity": "Driving & Road Transport",
+            "barrier_failure": "Speed Limit / Seatbelt Compliance",
+            "exposure": "Vehicle Rollover Exposure",
+            "potential_consequence": "FATALITY",
+            "life_saving_rule": "LSR_09_DRIVING_SAFETY",
+            "location": "Moran Access Road"
+          }
+        },
+        {
+          "ref": "SYN-E2",
+          "raw_text": "Worker entered confined crude storage tank without atmospheric gas testing.",
+          "location": "Crude Tank 104",
+          "precursor": {
+            "hazard": "Toxic H2S Gas / Oxygen Deficiency",
+            "activity": "Confined Space Entry",
+            "barrier_failure": "Atmospheric Testing / Entry Permit",
+            "exposure": "Asphyxiation Exposure",
+            "potential_consequence": "FATALITY",
+            "life_saving_rule": "LSR_05_CONFINED_SPACE",
+            "location": "Crude Tank 104"
+          }
+        },
+        {
+          "ref": "SYN-E3",
+          "raw_text": "Electrical breaker arced while technician was racking 415V switchgear without PPE.",
+          "location": "Substation 02",
+          "precursor": {
+            "hazard": "Electrical Arc Flash",
+            "activity": "Switchgear Maintenance",
+            "barrier_failure": "Electrical Isolation / Arc Flash PPE",
+            "exposure": "Electrical Shock / Arc Flash Exposure",
+            "potential_consequence": "PERMANENT_DISABLING_INJURY",
+            "life_saving_rule": "LSR_04_ENERGY_ISOLATION",
+            "location": "Substation 02"
+          }
+        }
+      ]
+    }
+  }
+}

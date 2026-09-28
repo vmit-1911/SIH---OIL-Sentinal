@@ -1,0 +1,157 @@
+[
+  {
+    "_comment": "SYNTHETIC SCENARIO 01 - Clear SIF Precursor (Mechanical Lifting / Dropped Object)",
+    "scenario_id": "SYNTH_SCENARIO_01_CLEAR_SIF_PRECURSOR",
+    "report_ref": "SYNTH-NM-2026-001",
+    "source_type": "NEAR_MISS",
+    "raw_text": "While running 9-5/8 inch casing at Rig-04, the air winch line parted and the heavy elevator swung across the rig floor, narrowly missing two floormen who jumped out of the way. No injuries occurred.",
+    "reported_location": "Rig-04 / Moran Field",
+    "reported_department": "Drilling Operations",
+    "actual_severity": "NO_INJURY",
+    "expected_entities": {
+      "activity": "Casing Running Operation",
+      "hazard": "Suspended Heavy Load",
+      "barrier_failure": "Lifting Line / Rigging Failure",
+      "exposure": "Personnel in Line of Fire / Swing Path"
+    },
+    "event_timestamp": "2026-09-20T10:15:00Z"
+  },
+  {
+    "_comment": "SYNTHETIC SCENARIO 02 - Near Miss with No Injury (High Pressure Gas Release)",
+    "scenario_id": "SYNTH_SCENARIO_02_HIGH_PRESSURE_NEAR_MISS",
+    "report_ref": "SYNTH-NM-2026-002",
+    "source_type": "NEAR_MISS",
+    "raw_text": "Technician began unbolting the high pressure flange on the production manifold at EPS-02. Trapped pressurized hydrocarbon gas vented with a loud roar when the first two studs were loosened because the double-block-and-bleed valve was not fully closed.",
+    "reported_location": "EPS-02 / Early Production Facility",
+    "reported_department": "Production & Processing",
+    "actual_severity": "NO_INJURY",
+    "expected_entities": {
+      "activity": "Manifold & Valve Maintenance",
+      "hazard": "High Pressure Fluid / Gas",
+      "barrier_failure": "Energy Isolation (LOTO) Failure"
+    },
+    "event_timestamp": "2026-09-21T08:45:00Z"
+  },
+  {
+    "_comment": "SYNTHETIC SCENARIO 03 - Routine Non-SIF Observation (Housekeeping)",
+    "scenario_id": "SYNTH_SCENARIO_03_ROUTINE_NON_SIF",
+    "report_ref": "SYNTH-UC-2026-003",
+    "source_type": "UC",
+    "raw_text": "Empty paint cans and cleaning rags left unattended near the workshop entrance walkway, creating a trip hazard for personnel entering the storeroom.",
+    "reported_location": "Duliajan Central Workshop",
+    "reported_department": "Maintenance & Logistics",
+    "actual_severity": "NO_INJURY",
+    "expected_entities": {
+      "activity": "Routine Housekeeping",
+      "hazard": "Housekeeping & Minor Trip Hazard"
+    },
+    "event_timestamp": "2026-09-21T16:00:00Z"
+  },
+  {
+    "_comment": "SYNTHETIC SCENARIO 04 - Direct Barrier Failure (Working at Height)",
+    "scenario_id": "SYNTH_SCENARIO_04_BARRIER_FAILURE_HEIGHT",
+    "report_ref": "SYNTH-UA-2026-004",
+    "source_type": "UA",
+    "raw_text": "During mast maintenance on the monkey board at 25 meters height, a derrickman unhooked his full body harness lanyard from the inertia reel to reach a grease nipple on the crown block without 100% tie-off.",
+    "reported_location": "Rig-07 / Digboi Drilling Field",
+    "reported_department": "Drilling Operations",
+    "actual_severity": "NO_INJURY",
+    "expected_entities": {
+      "activity": "Mast & Derrick Maintenance",
+      "hazard": "Working at Height Fall Exposure",
+      "barrier_failure": "Fall Protection Disconnected / Not Used",
+      "people_role": "Derrickman"
+    },
+    "event_timestamp": "2026-09-22T14:30:00Z"
+  },
+  {
+    "_comment": "SYNTHETIC SCENARIO 05 - Multiple Hazards (Hot Work + Electrical Switchgear)",
+    "scenario_id": "SYNTH_SCENARIO_05_MULTIPLE_HAZARDS",
+    "report_ref": "SYNTH-UC-2026-005",
+    "source_type": "UC",
+    "raw_text": "Contractor personnel was welding a pipe support bracket adjacent to an energized live circuit electrical switchgear with live high voltage cables exposed on the ground.",
+    "reported_location": "Compressor Station 1",
+    "reported_department": "Engineering Services",
+    "actual_severity": "NO_INJURY",
+    "expected_entities": {
+      "activity": "Hot Work & Welding",
+      "hazards": ["Electrical Energy / Arc Flash", "Flammable Hydrocarbon Release"]
+    },
+    "event_timestamp": "2026-09-22T11:20:00Z"
+  },
+  {
+    "_comment": "SYNTHETIC SCENARIO 06 - Multiple LSR Signals (Confined Space + Gas Test + Standby)",
+    "scenario_id": "SYNTH_SCENARIO_06_MULTIPLE_LSR_SIGNALS",
+    "report_ref": "SYNTH-NM-2026-006",
+    "source_type": "NEAR_MISS",
+    "raw_text": "Contractor personnel entered the crude oil storage tank compartment for sludge cleaning without gas test clearance certificate and without a dedicated standby man stationed at the manhole.",
+    "reported_location": "Tank Farm-3 / Moran Crude Terminal",
+    "reported_department": "Storage & Transportation",
+    "actual_severity": "NO_INJURY",
+    "expected_entities": {
+      "activity": "Tank & Vessel Cleaning",
+      "hazard": "Confined Space Atmosphere",
+      "barrier_failure": "Confined Space Control / Gas Test Omission"
+    },
+    "event_timestamp": "2026-09-23T09:10:00Z"
+  },
+  {
+    "_comment": "SYNTHETIC SCENARIO 07 - Negated Hazard (Routine Verification with No Incident)",
+    "scenario_id": "SYNTH_SCENARIO_07_NEGATED_HAZARD",
+    "report_ref": "SYNTH-UC-2026-007",
+    "source_type": "UC",
+    "raw_text": "Routine inspection was conducted on mud pump discharge line. No gas leak occurred and no pressure buildup was observed during the shift.",
+    "reported_location": "Rig-02 / Moran Field",
+    "reported_department": "Drilling Operations",
+    "actual_severity": "NO_INJURY",
+    "expected_entities": {
+      "negated_hazards": ["Flammable Hydrocarbon Release", "High Pressure Fluid / Gas"]
+    },
+    "event_timestamp": "2026-09-23T11:00:00Z"
+  },
+  {
+    "_comment": "SYNTHETIC SCENARIO 08 - Missing / Minimal Context",
+    "scenario_id": "SYNTH_SCENARIO_08_MINIMAL_CONTEXT",
+    "report_ref": "SYNTH-UC-2026-008",
+    "source_type": "UC",
+    "raw_text": "Observed unsafe condition near the compressor shed area yesterday.",
+    "reported_location": "Compressor Shed",
+    "reported_department": "General",
+    "actual_severity": "NO_INJURY",
+    "expected_entities": {
+      "hazards": []
+    },
+    "event_timestamp": "2026-09-23T12:00:00Z"
+  },
+  {
+    "_comment": "SYNTHETIC SCENARIO 09 - Different Wording for Same Hazard (Winch / Rigging)",
+    "scenario_id": "SYNTH_SCENARIO_09_DIFFERENT_WORDING_HAZARD",
+    "report_ref": "SYNTH-NM-2026-009",
+    "source_type": "NEAR_MISS",
+    "raw_text": "Tugger winch rope snapped during drill collar lifting, causing the swinging elevator to strike the mast ladder. Roughneck evacuated quickly.",
+    "reported_location": "Rig-05 / Digboi",
+    "reported_department": "Drilling Operations",
+    "actual_severity": "NO_INJURY",
+    "expected_entities": {
+      "hazard": "Suspended Heavy Load",
+      "barrier_failure": "Lifting Line / Rigging Failure"
+    },
+    "event_timestamp": "2026-09-23T13:15:00Z"
+  },
+  {
+    "_comment": "SYNTHETIC SCENARIO 10 - Short Observation with Limited Information",
+    "scenario_id": "SYNTH_SCENARIO_10_SHORT_OBSERVATION",
+    "report_ref": "SYNTH-UA-2026-010",
+    "source_type": "UA",
+    "raw_text": "Derrickman working without 100% tie-off on monkey board.",
+    "reported_location": "Rig-01",
+    "reported_department": "Drilling",
+    "actual_severity": "NO_INJURY",
+    "expected_entities": {
+      "hazard": "Working at Height Fall Exposure",
+      "barrier_failure": "Fall Protection Disconnected / Not Used",
+      "people_role": "Derrickman"
+    },
+    "event_timestamp": "2026-09-23T14:00:00Z"
+  }
+]

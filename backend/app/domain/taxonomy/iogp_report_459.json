@@ -1,0 +1,174 @@
+{
+  "taxonomy_id": "IOGP_REPORT_459",
+  "authority": "IOGP",
+  "version": "2018",
+  "name": "IOGP Life-Saving Rules (Report 459 - 2018 Edition)",
+  "description": "Standardized set of 9 Life-Saving Rules established by the International Association of Oil & Gas Producers to mitigate fatal and serious incidents in E&P operations.",
+  "active": true,
+  "rules": [
+    {
+      "code": "LSR_01_BYPASS_SAFETY_CONTROLS",
+      "name": "Bypassing Safety Controls",
+      "description": "Obtain authorization before overriding or disabling safety controls.",
+      "guidance": "Understand and use safety-critical equipment and procedures. Never bypass, disable, or tamper with safety controls without formal authorization.",
+      "detection_patterns": [
+        "bypass safety",
+        "override safety trip",
+        "disabled gas detector",
+        "bridged interlock",
+        "isolated relief valve",
+        "bypassed esd",
+        "overridden alarm",
+        "tampered prv",
+        "safety switch bypassed"
+      ],
+      "active": true
+    },
+    {
+      "code": "LSR_02_CONFINED_SPACE",
+      "name": "Confined Space",
+      "description": "Obtain authorization before entering a confined space.",
+      "guidance": "Confirm energy sources are isolated. Verify gas test is completed and atmosphere is monitored. Confirm standby attendant is posted.",
+      "detection_patterns": [
+        "confined space",
+        "tank entry",
+        "vessel entry",
+        "mud tank entry",
+        "separator entry",
+        "manhole entry",
+        "gas testing missing",
+        "no standby man",
+        "sump entry",
+        "sludge pit entry"
+      ],
+      "active": true
+    },
+    {
+      "code": "LSR_03_DRIVING",
+      "name": "Driving",
+      "description": "Follow safe driving rules.",
+      "guidance": "Always wear seatbelts. Do not exceed speed limits. Do not use mobile phones while driving. Adhere to journey management plans.",
+      "detection_patterns": [
+        "seatbelt not worn",
+        "overspeeding",
+        "mobile phone while driving",
+        "bowser rollover",
+        "journey management",
+        "driver fatigue",
+        "rough terrain driving",
+        "rash driving",
+        "unauthorized driver"
+      ],
+      "active": true
+    },
+    {
+      "code": "LSR_04_ENERGY_ISOLATION",
+      "name": "Energy Isolation",
+      "description": "Verify isolation and zero energy before work begins.",
+      "guidance": "Apply Lockout/Tagout (LOTO). Verify electrical, mechanical, hydraulic, and pressure isolations. Bleed off stored energy.",
+      "detection_patterns": [
+        "energy isolation",
+        "loto not applied",
+        "lockout tagout",
+        "pressure not bled",
+        "unisolated line",
+        "live circuit",
+        "spade missing",
+        "blind missing",
+        "stored pressure",
+        "double block and bleed"
+      ],
+      "active": true
+    },
+    {
+      "code": "LSR_05_HOT_WORK",
+      "name": "Hot Work",
+      "description": "Control flammables and ignition sources.",
+      "guidance": "Identify hazards and obtain hot work permit. Clear flammables and conduct continuous gas monitoring. Ensure fire watch and firefighting equipment.",
+      "detection_patterns": [
+        "hot work",
+        "welding without permit",
+        "gas cutting in hazardous area",
+        "grinding near wellhead",
+        "lack of fire watch",
+        "spark containment missing",
+        "flammable gas present",
+        "zone 1 hot work",
+        "habitat pressurization failure"
+      ],
+      "active": true
+    },
+    {
+      "code": "LSR_06_LINE_OF_FIRE",
+      "name": "Line of Fire",
+      "description": "Keep yourself and others out of the line of fire.",
+      "guidance": "Position yourself to avoid pinch points, moving machinery, dropped objects, and pressurized releases. Establish and respect exclusion zones.",
+      "detection_patterns": [
+        "line of fire",
+        "under suspended load",
+        "swing radius",
+        "pinch point",
+        "hose whip",
+        "dropped object path",
+        "reversing vehicle blind spot",
+        "standing behind winch",
+        "high pressure jet trajectory"
+      ],
+      "active": true
+    },
+    {
+      "code": "LSR_07_SAFE_MECHANICAL_LIFTING",
+      "name": "Safe Mechanical Lifting",
+      "description": "Plan lifting operations and control the area.",
+      "guidance": "Ensure lifting equipment is certified and inspected. Never exceed working load limits (WLL). Establish physical exclusion barriers.",
+      "detection_patterns": [
+        "crane lifting",
+        "winch line parted",
+        "sling snapped",
+        "rigging failure",
+        "overloaded hoist",
+        "unsecured load",
+        "derrick crane",
+        "air winch",
+        "tugger line",
+        "dropped tubular"
+      ],
+      "active": true
+    },
+    {
+      "code": "LSR_08_WORK_AUTHORIZATION",
+      "name": "Work Authorization",
+      "description": "Work with a valid permit when required.",
+      "guidance": "Confirm permit is valid and authorized. Understand the Job Safety Analysis (JSA). Conduct Tool Box Talk (TBT) before starting.",
+      "detection_patterns": [
+        "permit to work",
+        "ptw not obtained",
+        "unauthorized work",
+        "job safety analysis missing",
+        "toolbox talk not conducted",
+        "expired permit",
+        "work beyond permit scope",
+        "jsa not signed"
+      ],
+      "active": true
+    },
+    {
+      "code": "LSR_09_WORKING_AT_HEIGHT",
+      "name": "Working at Height",
+      "description": "Protect yourself against a fall when working at height.",
+      "guidance": "Use fall arrest equipment with 100% tie-off above designated heights. Inspect scaffolds, ladders, and safety harnesses before use.",
+      "detection_patterns": [
+        "working at height",
+        "safety harness not worn",
+        "100% tie off not maintained",
+        "unhooked lanyard",
+        "monkey board",
+        "derrick mast",
+        "scaffold missing guardrail",
+        "unsecured ladder",
+        "fall protection bypassed"
+      ],
+      "active": true
+    }
+  ]
+}

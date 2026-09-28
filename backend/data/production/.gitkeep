@@ -1,0 +1,2 @@
+# This directory is reserved strictly for production/real OIL operational data.
+# This directory is excluded from git via .gitignore to prevent proprietary data leakage.
